@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--InterGalactic Travel-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IntergalacticTravelHackwich" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceBackground" translatesAutoresizingMaskIntoConstraints="NO" id="yZU-AI-g0G">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="36W-pg-Vhr"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9uX-57-3aA"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Idb-xw-ln4"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KOH-vQ-NT6"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MPq-Lc-KWa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZU-AI-g0G" secondAttribute="bottom" id="dSU-L7-Am7"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ejF-gb-JQe"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sbq-ty-AHm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="InterGalactic Travel" id="BJh-yf-Nqb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2826.0869565217395" y="75.669642857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NSN-ed-vft">
+            <objects>
+                <viewController id="05L-Mb-KZw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02t-C0-o9c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M89-nG-h6S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWU-5l-Mrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3586.9565217391305" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RWu-Wq-Cd5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vbO-Sx-Jwm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YqG-00-Ecv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sfQ-aJ-xPi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gJ-DS-Vll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SpaceBackground" width="225" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
