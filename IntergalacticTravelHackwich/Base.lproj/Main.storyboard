@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vPe-kC-f0i">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -20,6 +20,18 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-Wm-wIS">
+                                <rect key="frame" x="28" y="231" width="358" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Visit Red Dwarf Star">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="05L-Mb-KZw" kind="show" id="euy-0Z-FXU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,53 +43,77 @@
                             <constraint firstItem="yZU-AI-g0G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MPq-Lc-KWa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZU-AI-g0G" secondAttribute="bottom" id="dSU-L7-Am7"/>
                             <constraint firstItem="yZU-AI-g0G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ejF-gb-JQe"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fCX-ia-JgN"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fPy-kb-24h"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mN6-J8-ehV"/>
                             <constraint firstItem="yZU-AI-g0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sbq-ty-AHm"/>
+                            <constraint firstItem="yZU-AI-g0G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xVT-l6-t1o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="InterGalactic Travel" id="BJh-yf-Nqb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826.0869565217395" y="75.669642857142847"/>
+            <point key="canvasLocation" x="3736.2318840579715" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Star View Controller-->
         <scene sceneID="NSN-ed-vft">
             <objects>
-                <viewController id="05L-Mb-KZw" sceneMemberID="viewController">
+                <viewController id="05L-Mb-KZw" customClass="StarViewController" customModule="IntergalacticTravelHackwich" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02t-C0-o9c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CwL-OQ-zet">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="hZ4-Zq-BOE"/>
+                                    <constraint firstAttribute="height" constant="128" id="zPb-iC-C8P"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="M89-nG-h6S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CwL-OQ-zet" firstAttribute="centerX" secondItem="02t-C0-o9c" secondAttribute="centerX" id="1iU-hZ-Dp7"/>
+                            <constraint firstItem="CwL-OQ-zet" firstAttribute="centerY" secondItem="02t-C0-o9c" secondAttribute="centerY" id="qUi-ig-tOH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dQM-gD-Kfh"/>
+                    <connections>
+                        <outlet property="starImageView" destination="CwL-OQ-zet" id="dLc-p5-3bf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWU-5l-Mrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586.9565217391305" y="93.75"/>
+            <point key="canvasLocation" x="4474" y="76"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RWu-Wq-Cd5">
+        <scene sceneID="xqV-yK-4CC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vbO-Sx-Jwm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vPe-kC-f0i" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YqG-00-Ecv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rN0-6h-Vcl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sfQ-aJ-xPi"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SSO-w9-RhX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6gJ-DS-Vll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ooe-dO-abS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915.9420289855075" y="75.669642857142847"/>
+            <point key="canvasLocation" x="2826.0869565217395" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
         <image name="SpaceBackground" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

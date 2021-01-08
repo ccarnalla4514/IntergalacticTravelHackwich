@@ -13,6 +13,7 @@
 		AA5E1E6E25A65481005CF55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5E1E6C25A65481005CF55C /* Main.storyboard */; };
 		AA5E1E7025A65486005CF55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5E1E6F25A65486005CF55C /* Assets.xcassets */; };
 		AA5E1E7325A65486005CF55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5E1E7125A65486005CF55C /* LaunchScreen.storyboard */; };
+		AA5E1E7D25A8FC63005CF55C /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E1E7C25A8FC63005CF55C /* StarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AA5E1E6F25A65486005CF55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5E1E7225A65486005CF55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA5E1E7425A65486005CF55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA5E1E7C25A8FC63005CF55C /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AA5E1E6625A65481005CF55C /* AppDelegate.swift */,
 				AA5E1E6825A65481005CF55C /* SceneDelegate.swift */,
 				AA5E1E6A25A65481005CF55C /* ViewController.swift */,
+				AA5E1E7C25A8FC63005CF55C /* StarViewController.swift */,
 				AA5E1E6C25A65481005CF55C /* Main.storyboard */,
 				AA5E1E6F25A65486005CF55C /* Assets.xcassets */,
 				AA5E1E7125A65486005CF55C /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5E1E7D25A8FC63005CF55C /* StarViewController.swift in Sources */,
 				AA5E1E6B25A65481005CF55C /* ViewController.swift in Sources */,
 				AA5E1E6725A65481005CF55C /* AppDelegate.swift in Sources */,
 				AA5E1E6925A65481005CF55C /* SceneDelegate.swift in Sources */,
