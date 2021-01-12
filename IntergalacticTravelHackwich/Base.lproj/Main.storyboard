@@ -20,16 +20,28 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-Wm-wIS">
-                                <rect key="frame" x="28" y="231" width="358" height="55"/>
+                            <button opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-Ee-g5E">
+                                <rect key="frame" x="28" y="495" width="358" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Visit Red Dwarf Star">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Visit Blue Dwarf Star">
+                                    <color key="titleColor" systemColor="linkColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="05L-Mb-KZw" kind="show" id="euy-0Z-FXU"/>
+                                    <action selector="whenBlueStarButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uw9-WD-KsH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-Wm-wIS">
+                                <rect key="frame" x="28" y="267" width="358" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83174298473240171" green="0.0" blue="0.041222999438891905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Visit Red Dwarf Star">
+                                    <color key="titleColor" red="1" green="0.78213305546759859" blue="0.78675984625769568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="05L-Mb-KZw" kind="show" identifier="RedSegue" id="euy-0Z-FXU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,6 +63,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="InterGalactic Travel" id="BJh-yf-Nqb"/>
+                    <connections>
+                        <segue destination="05L-Mb-KZw" kind="show" identifier="BlueSegue" id="szo-mM-CzO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +88,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M89-nG-h6S"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="CwL-OQ-zet" firstAttribute="centerX" secondItem="02t-C0-o9c" secondAttribute="centerX" id="1iU-hZ-Dp7"/>
                             <constraint firstItem="CwL-OQ-zet" firstAttribute="centerY" secondItem="02t-C0-o9c" secondAttribute="centerY" id="qUi-ig-tOH"/>
@@ -81,7 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dQM-gD-Kfh"/>
                     <connections>
-                        <outlet property="starImageView" destination="CwL-OQ-zet" id="dLc-p5-3bf"/>
+                        <outlet property="starImageView" destination="CwL-OQ-zet" id="kWy-1y-Qy6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWU-5l-Mrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,13 +122,22 @@
             <point key="canvasLocation" x="2826.0869565217395" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="szo-mM-CzO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="SpaceBackground" width="225" height="225"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
